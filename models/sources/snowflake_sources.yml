@@ -1,0 +1,36 @@
+sources:
+  - name: landing
+    description: The primary source system for order management system(OMS) data analytics.  
+    database: SNOWFLAKE_LEARNING_DB
+    schema: L1_LANDING
+
+    tables:
+      - name: customers
+        description: The customers table from order management system(OMS).      
+        identifier: customers
+        tests:
+          - not_null:
+              column_name: customerid
+      - name: orders
+        description: The orders table from order management system(OMS).      
+        identifier: orders
+        loaded_at_field: updated_at
+        # freshness:
+        #   warn_after:
+        #     count: 12
+        #     period: hour
+        #   error_after:
+        #     count: 24
+        #     period: hour
+      - name: orderitems
+        description: The orderitems table from order management system(OMS).      
+        identifier: orderitems
+      - name: employees
+        description: The employees table from order management system(OMS).      
+        identifier: employees
+        # columns:
+        #   - name: address
+        #     description: Full Address of emplyees for Transport Arrangements.          
+        #     tests:
+        #       - not_null
+        #       - string_not_empty

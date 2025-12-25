@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging orders data"
+    columns:
+      - name: orderid
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_customers
+    description: "Staging customers data"
+    columns:
+      - name: customerid
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_employee
+    description: "Staging employee data"
+    columns:
+      - name: EMPLOYEEID
+        tests:
+          - not_null
+          - unique
