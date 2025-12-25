@@ -25,7 +25,7 @@ sources:
       - name: orderitems
         description: The orderitems table from order management system(OMS).      
         identifier: orderitems
-      - name: employees
+      - name: employee
         description: The employees table from order management system(OMS).      
         identifier: employees
         # columns:

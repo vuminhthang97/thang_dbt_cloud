@@ -4,6 +4,6 @@ select
 	productid,
 	quantity,
 	unitprice,
-	quantity * unitprice as totalprice,
+	-- quantity * unitprice as totalprice,
 	updated_at
 from {{ source('landing', 'orderitems') }}

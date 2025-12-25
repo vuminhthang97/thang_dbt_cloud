@@ -24,3 +24,25 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: stg_orderitems
+    description: "Staging orderitems data"
+    columns:
+      - name: orderitemid
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+                  values: ["> 0"]
+
+  - name: stg_employee
+    description: "Staging employee data"
+    columns:
+      - name: employeeid
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+                  values: ["> 0"]
+          
+        

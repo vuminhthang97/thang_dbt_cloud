@@ -1,6 +1,6 @@
 select 
-	EMPLOYEEID,
-    FIRSTNAME,
-    LASTNAME,
-    concat(FIRSTNAME, ' ', LASTNAME) as full_name
-from {{ source('landing', 'employees') }}
+	employeeid,
+    firstname,
+    lastname,
+    concat(firstname, ' ', lastname) as full_name
+from {{ source('landing', 'employee') }}
