@@ -17,14 +17,6 @@ models:
           - not_null
           - unique
 
-  - name: stg_employee
-    description: "Staging employee data"
-    columns:
-      - name: EMPLOYEEID
-        tests:
-          - not_null
-          - unique
-
   - name: stg_orderitems
     description: "Staging orderitems data"
     columns:
@@ -39,6 +31,36 @@ models:
     description: "Staging employee data"
     columns:
       - name: employeeid
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+                  values: ["> 0"]
+
+  - name: stg_products
+    description: "Staging employee data"
+    columns:
+      - name: productid
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+                  values: ["> 0"]
+
+  - name: stg_stores
+    description: "Staging employee data"
+    columns:
+      - name: storeid
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+                  values: ["> 0"]
+  
+  - name: stg_suppliers
+    description: "Staging employee data"
+    columns:
+      - name: supplierid
         tests:
           - not_null
           - unique

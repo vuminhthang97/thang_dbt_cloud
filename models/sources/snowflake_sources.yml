@@ -34,3 +34,24 @@ sources:
         #     tests:
         #       - not_null
         #       - string_not_empty
+      
+      - name: products
+        description: The products table from order management system(OMS).      
+        identifier: products
+        tests:
+          - not_null:
+              column_name: productid
+
+      - name: stores
+        description: The products table from order management system(OMS).      
+        identifier: stores
+        tests:
+          - not_null:
+              column_name: storeid
+
+      - name: suppliers
+        description: The suppliers table from order management system(OMS).      
+        identifier: suppliers
+        tests:
+          - not_null:
+              column_name: supplierid
